@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 01 - ¿Es igual a 100?</title>
+</head>
+<body>
+  <h1>Ejercicio 01: ¿Es igual a 100?</h1>
+
+  <p>Ingresa un número y verifica si es igual a 100:</p>
+  <input type="number" id="valor" value="100">
+  <button onclick="verificar()">Comprobar</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function verificar() {
+      let valor = Number(document.getElementById("valor").value);
+      let resultado = document.getElementById("resultado");
+
+      if (valor === 100) {
+        resultado.textContent = "✅ ¡Correcto! El valor es exactamente igual a 100.";
+      } else {
+        resultado.textContent = "❌ El valor no es 100, es " + valor;
+      }
+    }
+  </script>
+</body>
+</html>
